@@ -1,4 +1,4 @@
-// Create a program that moves a servomotor 180 degrees and then back to 0 degrees.
+// Create a program that moves a servomotor to a certain position based on a potentiometer input.
 
 // Import the Servo library
 #include <Servo.h>
@@ -16,17 +16,15 @@ void setup()
 // Loop
 void loop()
 {
-    // Move by 180 degrees step by step
-    for (int i = 0; i < 180; i++)
-    {
-        myservo.write(i);
-        delay(15);
-    }
-    // Move back to 0 step by step
-    for (int i = 180; i >= 0; i--)
-    {
-        myservo.write(i);
-        delay(15);
-    }
-    
+    // Read the analog input
+    int analogValue = analogRead(A0);
+
+    // Map the analog value to a servo position
+    int servoPosition = map(analogValue, 0, 1023, 0, 180);
+
+    // Set the servo position
+    myservo.write(servoPosition);
+
+    // Wait a bit
+    delay(100);
 }
