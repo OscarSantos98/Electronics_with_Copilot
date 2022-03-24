@@ -7,6 +7,9 @@ Live coding with arduino and micropython examples.
 ## Watch the Re-Play
 
 [https://www.facebook.com/watch/?v=356554426390458](https://www.facebook.com/watch/?v=356554426390458)
+GitHub Copilot             |  Tinkercad
+:-------------------------:|:-------------------------:
+![](img/vscode.png)       |   ![](img/tinkercad.png)
 
 ## Software and Tools used during the workshop
 
